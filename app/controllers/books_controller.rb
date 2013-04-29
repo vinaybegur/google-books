@@ -2,7 +2,7 @@ class BooksController < ApplicationController
 
   def index
     search_condition = params[:input_value].to_s
-    @books_array = GoogleBooks.search(search_condition, {:order_by => 'newest', :count => 20})
+    @books_array = GoogleBooks.search(search_condition, {:order_by => 'newest', :count => 40})
     @books = Kaminari.paginate_array(@books_array.to_a).page(params[:page]).per(5)
   end
 
