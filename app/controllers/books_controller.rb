@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     puts "AAAAAAAAAAAAAAAAAA"
     if params[:input_value] and !params[:input_value].blank?
       search_condition = params[:input_value].to_s
-      @books_array = GoogleBooks.search(search_condition, {:order_by => 'newest', :count => 10})
+      @books_array = GoogleBooks.search(search_condition, {:order_by => 'newest', :count => 20})
       @books = @books_array#.paginate(:page => 1, :per_page => 5)
       puts @books.inspect
       #            @arr_books = Book.all
