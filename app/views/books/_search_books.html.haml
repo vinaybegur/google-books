@@ -1,9 +1,7 @@
-%table{:align => "center", :style => "margin-top: 200px"}
-  %tr
-    %td{:colspan => "2"}
-      #validate_input_message
+%table{:align => "center", :style => "margin-top: 20px"}
   %tr
     %td Search Books
     %td
-      = text_field_tag :input_value,"",:class => 'text_field'
-      \&nbsp;&nbsp;&nbsp;&nbsp;#{link_to_function 'Submit',"validate_form()"}
+      = form_tag root_path do
+        = text_field_tag :input_value
+        = submit_tag 'Submit', :onclick => "return validate_form()", :remote => true

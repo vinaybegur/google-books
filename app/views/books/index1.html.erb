@@ -1,23 +1,12 @@
 <table>
   <tr>
-    <th>Authors</th>
-    <th>Title</th>
-    <th>Thumbnail</th>
-  </tr>
-  <% @books.each do |b| %>
-    <tr>
-      <td><%= b.authors %></td>
-      <td><%= b.title %></td>
-      <td><%= image_tag(b.image_link) %></td>
-    </tr>
-  <% end %>
-<% end %>
-  <tr>
-    <td colspan="3"><%= link_to "Back", root_path %></td>
+    <td>
+      <div id="display_form">
+        <%= render :partial => "search_books" %>
+      </div>
+    </td>
   </tr>
 </table>
-<% if !@books.empty? %>
-<tr>
-  <td colspan="3"><%= will_paginate @books %></td>
-</tr>
-<% end %>
+<div id="display_books">
+  <%= render :partial => "books" %>
+</div>

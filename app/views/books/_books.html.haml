@@ -1,17 +1,20 @@
-.page-header
-  %h1= "Books"
-%table.table-striped
-  %thead
-    %tr
-      %th Authors
-      %th Title
-      %th Thumbnail
-  %tbody
-    - @books.each do |b|
+-unless @books.empty?
+  .page-header
+    %h1= "Books"
+
+  %table.table-striped
+    %thead
       %tr
-        %td= b.authors
-        %td= b.title
-        %td= image_tag(b.image_link(:zoom => 5))
+        %th Authors
+        %th Title
+        %th Thumbnail
+    %tbody
+      - @books.each do |b|
+        %tr
+          %td= b.authors
+          %td= b.title
+          %td= image_tag(b.image_link(:zoom => 5))
+  = paginate @books
 
 
 //= link_to "Back", root_path,:class => 'btn btn-primary'

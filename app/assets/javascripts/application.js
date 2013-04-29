@@ -16,10 +16,11 @@
 //= require_tree .
 
 function validate_form(){
-    input = $('#input_value').val();
-    if(input == ''){
+    valid = true;
+    if($('#input_value').val() == ''){
+        valid = false;
         alert("Please enter search criteria and try again.")
-    }else{
-        window.location.href = "/books?input_value="+input;
     }
+    //        window.location.href = "/books?input_value="+input;
+    return valid;
 }
