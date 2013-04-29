@@ -44,4 +44,4 @@ gem 'therubyracer', :platforms => :ruby
 gem "googlebooks", "~> 0.0.6"
 gem "haml-rails"
 
-gem 'will_paginate', '~> 3.0.3'
+gem 'kaminari'
