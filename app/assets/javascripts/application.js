@@ -21,6 +21,5 @@ function validate_form(){
         valid = false;
         alert("Please enter search criteria and try again.")
     }
-    //        window.location.href = "/books?input_value="+input;
     return valid;
 }
