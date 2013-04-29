@@ -1,0 +1,9 @@
+%table{:align => "center", :style => "margin-top: 200px"}
+  %tr
+    %td{:colspan => "2"}
+      #validate_input_message
+  %tr
+    %td Search Books
+    %td
+      = text_field_tag :input_value
+      \&nbsp;&nbsp;&nbsp;&nbsp;#{link_to_function 'Submit',"validate_form()"}

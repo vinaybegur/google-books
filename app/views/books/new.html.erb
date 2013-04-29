@@ -1,0 +1,34 @@
+<h4>Add New Book</h4>
+<table>
+  <%= form_for @book do |f| %>
+    <tr>
+      <td>
+        Authors:
+      </td>
+      <td>
+        <%= f.text_field :authors %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Title:
+      </td>
+      <td>
+        <%= f.text_field :title %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Image Link:
+      </td>
+      <td>
+        <%= f.text_field :image_link %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <%= f.submit %>
+      </td>
+    </tr>
+  <% end %>
+</table>

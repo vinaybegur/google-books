@@ -1,0 +1,12 @@
+%table
+  %tr
+    %th Authors
+    %th Title
+    %th Thumbnail
+  - @books.each do |b|
+    %tr
+      %td= b.authors
+      %td= b.title
+      %td= image_tag(b.image_link)
+  %tr
+    %td{:colspan => "3"}= link_to "Back", root_path
