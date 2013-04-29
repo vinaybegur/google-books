@@ -57,6 +57,8 @@ GoogleBooks::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   resources :books
-  match '/' => 'books#search_books', :as => :root
+  #  match '/' => 'books#search_books', :as => :root
+
+  match '/' => 'books#index', :as => :root
   
 end

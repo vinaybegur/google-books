@@ -4,21 +4,20 @@
     <th>Title</th>
     <th>Thumbnail</th>
   </tr>
-    <% @books.each do |b| %>
-      <tr>
-        <td><%= b.authors %></td>
-        <td><%= b.title %></td>
-        <td><%= image_tag(b.image_link) %></td>
-      </tr>
-    <% end %>
+  <% @books.each do |b| %>
+    <tr>
+      <td><%= b.authors %></td>
+      <td><%= b.title %></td>
+      <td><%= image_tag(b.image_link) %></td>
+    </tr>
   <% end %>
+<% end %>
   <tr>
     <td colspan="3"><%= link_to "Back", root_path %></td>
   </tr>
 </table>
-
-  <% if !@books.empty? %>
-    <tr>
-      <td colspan="3"><%= will_paginate @books %></td>
-    </tr>
-  <% end %>
+<% if !@books.empty? %>
+<tr>
+  <td colspan="3"><%= will_paginate @books %></td>
+</tr>
+<% end %>
