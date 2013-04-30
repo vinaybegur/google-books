@@ -13,7 +13,7 @@
         %tr
           %td= b.authors
           %td= b.title
-          %td= image_tag(b.image_link(:zoom => 5))
+          %td= b.image_link ? image_tag(b.image_link(:zoom => 5)) : "Image Not Found"
   = paginate @books
 
 
