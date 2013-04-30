@@ -1,6 +1,6 @@
 -unless @books.empty?
   .page-header
-    %h1= "Books"
+    %h1= "Displaying Results For '#{@key.input_value}'"
 
   %table.table-striped
     %thead
@@ -13,8 +13,10 @@
         %tr
           %td= b.authors
           %td= b.title
-          %td= b.image_link ? image_tag(b.image_link(:zoom => 5)) : "Image Not Found"
+          %td= b.image_link ? image_tag(b.image_link, :size => '52x80') : "Image Not Found"
   = paginate @books
-
-
-//= link_to "Back", root_path,:class => 'btn btn-primary'
+  :css
+    #display_form{
+        margin-top: 0%
+    }
+  = link_to "Back", root_path,:class => 'btn btn-primary'

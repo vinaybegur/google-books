@@ -56,7 +56,12 @@ GoogleBooks::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  resources :books
+  resources :books do
+    collection do
+      post :search_books
+    end
+  end
+  
   match '/' => 'books#index', :as => :root
   
 end

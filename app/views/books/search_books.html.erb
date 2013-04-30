@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h1>
+    Books Store Application Using Google Books API
+  </h1>
+</div>
+<table>
+  <tr>
+    <td>
+      Search Books
+    </td>
+    <td>
+      <%= form_tag root_path do %>
+        <%= text_field_tag :input_value %>
+        <%= submit_tag 'Submit', :onclick => "return validate_form()" %>
+      <% end %>
+    </td>
+  </tr>
+</table>

@@ -1,7 +1,11 @@
-%table{:align => "center", :style => "margin-top: 20px"}
+.page-header
+  %h1
+    %span Book Store Application
+    %small Using Google Books API
+%table{:class=>"main-table"}
   %tr
-    %td Search Books
     %td
       = form_tag root_path do
-        = text_field_tag :input_value
-        = submit_tag 'Submit', :onclick => "return validate_form()"
+        %div.wrapperForm
+          = text_field_tag :input_value
+          = submit_tag 'Search Books', :onclick => "return validate_form()" , :class=>"searchButton"
