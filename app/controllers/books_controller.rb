@@ -18,6 +18,9 @@ class BooksController < ApplicationController
     else
       @books = []
     end
+    puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    puts @books.inspect
+    puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
   end
 
 end
