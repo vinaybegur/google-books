@@ -2,21 +2,20 @@
   .page-header
     %h1= "Found results for '#{@key.input_value}'"
 
-  %table.table-striped
-    %thead
+  %table.table.table-striped
+    %tr
+      %th Book
+      %th Title
+      %th Authors
+    - @books.each do |b|
       %tr
-        %th Authors
-        %th Title
-        %th Thumbnail
-    %tbody
-      - @books.each do |b|
-        %tr
-          %td= b.authors
-          %td= b.title
-          %td= b.image_link ? image_tag(b.image_link, :size => '52x80') : "Image Not Found"
-  = paginate @books
-  :css
-    #display_form{
-        margin-top: 0%
-    }
-  = link_to "Back", root_path,:class => 'btn btn-primary'
+        %td= b.image_link ? image_tag(b.image_link, :size => '52x80') : "Image Not Found"
+        %td= b.title
+        %td= b.authors
+  .paginate_books
+    = paginate @books
+    :css
+      #display_form{
+          margin-top: 0%
+      }
+    = link_to "Back", root_path,:class => 'btn btn-primary'
