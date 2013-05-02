@@ -1,6 +1,8 @@
 -unless @books.empty?
-  .page-header
-    %h1= "Found results for '#{@key.input_value}'"
+  .page-header.searched-results
+    %h1
+      Found results for
+      %span "#{@key.input_value}"
 
   %table.table.table-striped
     %tr
@@ -13,9 +15,10 @@
         %td= b.title
         %td= b.authors
   .paginate_books
+    = link_to "Back", root_path,:class => 'btn btn-primary'
     = paginate @books
+    
     :css
       #display_form{
           margin-top: 0%
       }
-    = link_to "Back", root_path,:class => 'btn btn-primary'

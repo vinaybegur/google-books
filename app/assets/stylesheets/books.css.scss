@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.page-header{
+#display_books .page-header{
 text-align : right;
+border-bottom:0px;
+//border-top:1px solid #cccccc;
+margin:0px
+
 }
 
 #display_form {
@@ -60,5 +64,22 @@ text-align : right;
 }
 
 .paginate_books {
-  text-align : center;
+  text-align : right;
+}
+#display_books .page-header.searched-results h1
+{
+margin:0px;
+padding:0px;
+color:#666666;
+font-size:22px;
+}
+#display_books .page-header.searched-results h1 span
+{
+
+color:#333333;
+font-size:23px;
+}
+.paginate_books .btn-primary
+{
+float:left
 }
